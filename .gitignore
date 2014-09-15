@@ -33,3 +33,4 @@ tmp/
 *~.nib
 local.properties
 .settings/
+.project
