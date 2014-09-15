@@ -1,0 +1,35 @@
+# Java
+*.class
+.mtj.tmp/
+*.war
+*.ear
+hs_err_pid*
+
+# OS X
+._DSStore
+__MACOSX
+
+# Testing
+crash-reports/
+logs/
+world/
+whitelist*
+ops*
+bans*
+server*
+usercache*
+plugins/
+
+# IDE
+.classpath
+*.pydevproject
+.metadata
+.gradle
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
