@@ -2,7 +2,9 @@ package org.raftpowered;
 
 import java.util.UUID;
 
+import org.raftpowered.internal.Bans;
 import org.raftpowered.internal.Ops;
+import org.raftpowered.internal.Whitelist;
 
 public class OfflinePlayer {
 	private String name;
@@ -31,6 +33,37 @@ public class OfflinePlayer {
 	public void setOp(boolean op) {
 		if(op) Ops.add(getName());
 		else Ops.remove(getName());
+	}
+	/**
+	 * True if the player is banned, false otherwise.
+	 * @return Banned
+	 */
+	public boolean isBanned() {
+		return Bans.contains(getName());
+	}
+	/**
+	 * Enables or disables ban.
+	 * @param	banned	Banned
+	 */
+	public void setBanned(boolean banned) {
+		if(banned) Bans.add(getName());
+		else Bans.remove(getName());
+	}
+	/**
+	 * True if the player is whitelisted, false otherwise.
+	 * @return Whitelisted
+	 * @see Raft.getWhitelistEnabled()
+	 */
+	public boolean isWhitelisted() {
+		return Whitelist.contains(getName());
+	}
+	/**
+	 * Enables or disables whitelisting.
+	 * @param	whitelisted	Whitelisted
+	 */
+	public void setWhitelisted(boolean whitelisted) {
+		if(whitelisted) Whitelist.add(getName());
+		else Whitelist.remove(getName());
 	}
 	/**
 	 * Gets the player's username.

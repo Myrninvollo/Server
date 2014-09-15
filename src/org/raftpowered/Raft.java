@@ -22,7 +22,7 @@ import net.minecraft.world.WorldServer;
  * @author hotkeys
  */
 public class Raft extends Properties {
-	private static String serverVersion = "1.7.10", APIVersion = "a3";
+	private static String serverVersion = "1.7.10", APIVersion = "a4";
 	private static int protocolVersion = 5;
 	private static List<Command> commands = new ArrayList<Command>();
 	private static List<EventListener> listeners = new ArrayList<EventListener>();
